@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A5A4B502834887500FF7E0E /* BlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B4E2834887500FF7E0E /* BlogViewController.m */; };
 		9A5A4B542834899300FF7E0E /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */; };
+		9A5A4B5728348C4100FF7E0E /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B5628348C4100FF7E0E /* BlogPost.m */; };
 		9AD43FD828342DC80065B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FD728342DC80065B82A /* AppDelegate.m */; };
 		9AD43FDB28342DC80065B82A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDA28342DC80065B82A /* SceneDelegate.m */; };
 		9AD43FDE28342DC80065B82A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDD28342DC80065B82A /* ViewController.m */; };
@@ -43,6 +44,8 @@
 		9A5A4B4E2834887500FF7E0E /* BlogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogViewController.m; sourceTree = "<group>"; };
 		9A5A4B522834899300FF7E0E /* BlogTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogTableViewCell.h; sourceTree = "<group>"; };
 		9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
+		9A5A4B5528348C4100FF7E0E /* BlogPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		9A5A4B5628348C4100FF7E0E /* BlogPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		9AD43FD328342DC80065B82A /* TestBlogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBlogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD43FD628342DC80065B82A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD43FD728342DC80065B82A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +90,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A5A4B582834905700FF7E0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B5528348C4100FF7E0E /* BlogPost.h */,
+				9A5A4B5628348C4100FF7E0E /* BlogPost.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A5A4B592834906200FF7E0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B522834899300FF7E0E /* BlogTableViewCell.h */,
+				9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A5A4B5A2834907000FF7E0E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B5B2834907B00FF7E0E /* Onboarding */,
+				9A5A4B5C2834908B00FF7E0E /* Blog */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9A5A4B5B2834907B00FF7E0E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9AD43FDC28342DC80065B82A /* ViewController.h */,
+				9AD43FDD28342DC80065B82A /* ViewController.m */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9A5A4B5C2834908B00FF7E0E /* Blog */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B4D2834887500FF7E0E /* BlogViewController.h */,
+				9A5A4B4E2834887500FF7E0E /* BlogViewController.m */,
+			);
+			path = Blog;
+			sourceTree = "<group>";
+		};
 		9AD43FCA28342DC80065B82A = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +162,9 @@
 				9AD43FD728342DC80065B82A /* AppDelegate.m */,
 				9AD43FD928342DC80065B82A /* SceneDelegate.h */,
 				9AD43FDA28342DC80065B82A /* SceneDelegate.m */,
-				9AD43FDC28342DC80065B82A /* ViewController.h */,
-				9A5A4B4D2834887500FF7E0E /* BlogViewController.h */,
-				9A5A4B522834899300FF7E0E /* BlogTableViewCell.h */,
-				9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */,
-				9A5A4B4E2834887500FF7E0E /* BlogViewController.m */,
-				9AD43FDD28342DC80065B82A /* ViewController.m */,
+				9A5A4B5A2834907000FF7E0E /* ViewController */,
+				9A5A4B592834906200FF7E0E /* View */,
+				9A5A4B582834905700FF7E0E /* Model */,
 				9AD43FDF28342DC80065B82A /* Main.storyboard */,
 				9AD43FE228342DC90065B82A /* Assets.xcassets */,
 				9AD43FE428342DC90065B82A /* LaunchScreen.storyboard */,
@@ -276,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5A4B5728348C4100FF7E0E /* BlogPost.m in Sources */,
 				9AD43FDE28342DC80065B82A /* ViewController.m in Sources */,
 				9AD43FD828342DC80065B82A /* AppDelegate.m in Sources */,
 				9A5A4B502834887500FF7E0E /* BlogViewController.m in Sources */,

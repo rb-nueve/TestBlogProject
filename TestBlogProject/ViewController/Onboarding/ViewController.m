@@ -36,6 +36,11 @@
     [config setTitle:@"Show Blog"];
      
     self.welcomeButton.configuration = config;
+    [self.welcomeButton addTarget:self action:@selector(navigateToPosts:) forControlEvents:(UIControlEventTouchUpInside)];
+}
+
+- (void) navigateToPosts:(UIButton *)button {
+    [self performSegueWithIdentifier:@"segue" sender:button];
 }
 
 

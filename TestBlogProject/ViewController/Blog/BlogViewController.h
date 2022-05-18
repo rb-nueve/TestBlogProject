@@ -6,11 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlogPost.h"
+#import "BlogTableViewCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlogViewController : UIViewController
+@interface BlogViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSMutableArray<BlogPost *> *posts;
 
 @end
 
