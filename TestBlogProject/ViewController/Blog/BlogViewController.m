@@ -13,6 +13,7 @@
 
 @implementation BlogViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.delegate = self;
@@ -46,6 +47,19 @@
 };
 
 - (void)tableView:(UITableView *)tableView cancelPrefetchingForRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BlogPost *post = self.posts[indexPath.row];
+    self.selectedPost = post;
+    [self performSegueWithIdentifier:@"detail" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    BlogDetailViewController *vc = segue.destinationViewController;
+    vc.post = self.selectedPost;
     
 }
 

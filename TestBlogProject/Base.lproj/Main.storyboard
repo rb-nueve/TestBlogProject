@@ -141,11 +141,47 @@
                     <navigationItem key="navigationItem" title="BLOG POSTS" id="kim-Pd-9qS"/>
                     <connections>
                         <outlet property="tableView" destination="x4U-bJ-Slp" id="VqJ-m4-Slg"/>
+                        <segue destination="VGd-Ph-sba" kind="show" identifier="detail" id="9Mb-0h-iQq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPD-2O-wRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1560.8695652173915" y="164.73214285714286"/>
+        </scene>
+        <!--Blog Detail View Controller-->
+        <scene sceneID="Nc1-rU-EiC">
+            <objects>
+                <viewController id="VGd-Ph-sba" customClass="BlogDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Sc-2N-py0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-MA-UnP">
+                                <rect key="frame" x="8" y="108" width="398" height="734"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R5f-h5-20r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R5f-h5-20r" firstAttribute="bottom" secondItem="0y5-MA-UnP" secondAttribute="bottom" id="7DU-qI-ec1"/>
+                            <constraint firstItem="0y5-MA-UnP" firstAttribute="top" secondItem="R5f-h5-20r" secondAttribute="top" id="jNG-FZ-jGG"/>
+                            <constraint firstItem="R5f-h5-20r" firstAttribute="trailing" secondItem="0y5-MA-UnP" secondAttribute="trailing" constant="8" id="m1c-l7-rlI"/>
+                            <constraint firstItem="0y5-MA-UnP" firstAttribute="leading" secondItem="R5f-h5-20r" secondAttribute="leading" constant="8" id="vU7-a6-ihg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="adX-Ip-jSp"/>
+                    <connections>
+                        <outlet property="webView" destination="0y5-MA-UnP" id="vY4-OP-JMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shq-Uo-qJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328" y="249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nom-A6-hr6">
