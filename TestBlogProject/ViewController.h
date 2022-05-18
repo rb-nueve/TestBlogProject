@@ -9,6 +9,6 @@
 
 @interface ViewController : UIViewController
 
-
+@property UIButton *welcomeButton;
 @end
 
