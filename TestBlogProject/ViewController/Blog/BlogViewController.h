@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlogViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface BlogViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSMutableArray<BlogPost *> *posts;
 

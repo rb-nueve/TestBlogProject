@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WRr-7J-5CC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -20,23 +20,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="WELCOME" id="Bv1-v8-gXF"/>
                     <connections>
-                        <segue destination="cYR-2n-BuX" kind="show" identifier="segue" id="mUA-Pw-HJ1"/>
+                        <segue destination="WRr-7J-5CC" kind="show" identifier="segue" id="kQp-2T-dCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+            <point key="canvasLocation" x="728" y="3"/>
         </scene>
         <!--BLOG POSTS-->
         <scene sceneID="8Sw-hu-xbN">
             <objects>
                 <viewController id="cYR-2n-BuX" customClass="BlogViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naP-QV-Mni">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x4U-bJ-Slp">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="303" id="0aT-Q6-Bq1" customClass="BlogTableViewCell">
@@ -92,12 +92,19 @@
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i94-R1-LVe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="185"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="i94-R1-LVe" secondAttribute="trailing" id="4DN-Cb-mQZ"/>
                                                         <constraint firstItem="oea-Zp-cb9" firstAttribute="top" secondItem="1dx-sh-Scw" secondAttribute="top" id="54L-RB-iCU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="i94-R1-LVe" secondAttribute="bottom" constant="80" id="7hq-yE-2Db"/>
                                                         <constraint firstAttribute="trailing" secondItem="oea-Zp-cb9" secondAttribute="trailing" id="Aak-j8-zpn"/>
                                                         <constraint firstAttribute="bottom" secondItem="oea-Zp-cb9" secondAttribute="bottom" id="Fbk-2R-dlN"/>
+                                                        <constraint firstItem="i94-R1-LVe" firstAttribute="leading" secondItem="1dx-sh-Scw" secondAttribute="leading" id="bQu-UO-aXC"/>
+                                                        <constraint firstItem="i94-R1-LVe" firstAttribute="top" secondItem="1dx-sh-Scw" secondAttribute="top" id="cEQ-0B-Znn"/>
                                                         <constraint firstItem="oea-Zp-cb9" firstAttribute="leading" secondItem="1dx-sh-Scw" secondAttribute="leading" id="viw-fC-PJP"/>
                                                     </constraints>
                                                 </view>
@@ -113,6 +120,7 @@
                                         <connections>
                                             <outlet property="blogImageView" destination="TwJ-Ya-dpV" id="S0Q-r3-xVI"/>
                                             <outlet property="containerView" destination="1dx-sh-Scw" id="Ees-i6-MqZ"/>
+                                            <outlet property="indicator" destination="i94-R1-LVe" id="BnF-TX-qOS"/>
                                             <outlet property="secondaryTitleLabel" destination="z9R-sc-gvX" id="oRs-G0-kNV"/>
                                             <outlet property="subtitleLabel" destination="ocI-Va-hUe" id="EEh-bi-1yy"/>
                                             <outlet property="titleLabel" destination="Nyg-em-lC0" id="1Kl-Ol-kCs"/>
@@ -122,9 +130,9 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dvJ-Fw-dUr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97647064920000004" green="0.97647064920000004" blue="0.97647064920000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dvJ-Fw-dUr" firstAttribute="bottom" secondItem="x4U-bJ-Slp" secondAttribute="bottom" id="8Sz-Kb-WZZ"/>
+                            <constraint firstAttribute="bottom" secondItem="x4U-bJ-Slp" secondAttribute="bottom" id="8Sz-Kb-WZZ"/>
                             <constraint firstItem="x4U-bJ-Slp" firstAttribute="leading" secondItem="dvJ-Fw-dUr" secondAttribute="leading" id="9UV-K5-Kd0"/>
                             <constraint firstItem="dvJ-Fw-dUr" firstAttribute="trailing" secondItem="x4U-bJ-Slp" secondAttribute="trailing" id="ZpO-Im-ZXQ"/>
                             <constraint firstItem="x4U-bJ-Slp" firstAttribute="top" secondItem="dvJ-Fw-dUr" secondAttribute="top" id="h7U-u6-RmX"/>
@@ -144,13 +152,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WRr-7J-5CC" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QEk-RV-JLo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="sYE-6N-hM4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eSV-2m-oSA"/>
+                        <segue destination="cYR-2n-BuX" kind="relationship" relationship="rootViewController" id="Abv-Fi-N2F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6py-rj-fCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

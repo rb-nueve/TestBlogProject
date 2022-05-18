@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString* pubDate;
 @property NSString* link;
 @property (nullable) NSData* thumbnailData;
+@property NSString*  startedFetching;
 @end
 
 NS_ASSUME_NONNULL_END

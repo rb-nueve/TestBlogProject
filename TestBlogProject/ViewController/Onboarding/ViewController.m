@@ -43,5 +43,21 @@
     [self performSegueWithIdentifier:@"segue" sender:button];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"segue"]) {
+        UINavigationController *controller = segue.destinationViewController;
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+            {
+                controller.modalPresentationStyle = UIModalPresentationFullScreen;
+                NSLog(@"This is an iPhone");
+            }
+            else
+            {
+                NSLog(@"This is an iPad");
+            }
+    }
+}
+
 
 @end

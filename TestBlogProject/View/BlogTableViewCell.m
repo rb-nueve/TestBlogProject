@@ -32,8 +32,10 @@
     
     if (post.thumbnailData == nil) {
                 self.blogImageView.image = [UIImage imageNamed:@"placeHolder"];
+        [self.indicator startAnimating];
             } else {
                 self.blogImageView.image = [UIImage imageWithData:post.thumbnailData];
+                [self.indicator stopAnimating];
             }
     
 

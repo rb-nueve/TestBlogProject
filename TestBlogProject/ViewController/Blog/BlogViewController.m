@@ -17,6 +17,8 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.prefetchingEnabled = true;
+    self.tableView.prefetchDataSource = self;
     self.tableView.rowHeight = 300;
     [self fetchPosts];
     // Do any additional setup after loading the view from its nib.
@@ -30,9 +32,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell configure:self.posts[indexPath.row]];
-    [self fetchThumbNail:self.posts[indexPath.row].thumbnail];
+    
+    [self fetchThumbNail:indexPath];
      return  cell;
 };
+
+- (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    for (NSIndexPath *i in indexPaths) {
+        
+        [self fetchThumbNail:i];
+    }
+    
+};
+
+- (void)tableView:(UITableView *)tableView cancelPrefetchingForRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
+    
+}
 
 
 -(void) fetchPosts {
@@ -75,6 +90,7 @@
             post.blogDescription = description;
             post.link = link;
             post.thumbnail = thumbnail;
+            post.startedFetching = @"NO";
             [self.posts addObject:post];
         }
         
@@ -91,8 +107,27 @@
 }
 
 
-- (void) fetchThumbNail:(NSString *)thumbnail {
+- (void) fetchThumbNail:(NSIndexPath *)indexPath {
+        
+     
+    if (self.posts[indexPath.row].thumbnailData != nil) {
+       
+        return ;
+    }
     
+    if ([self.posts[indexPath.row].startedFetching isEqualToString:@"YES"]) {
+        return ;
+    }
+    
+    self.posts[indexPath.row].startedFetching = @"YES";
+        NSURL *url = [[NSURL alloc] initWithString:self.posts[indexPath.row].thumbnail];
+        [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            self.posts[indexPath.row].thumbnailData = data;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+                //[self.indicator stopAnimating];
+            });
+        }] resume];
 }
 
 
