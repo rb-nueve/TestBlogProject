@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlogPost.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *secondaryTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
+- (void)  configure:(BlogPost *)post ;
 
 @end
 

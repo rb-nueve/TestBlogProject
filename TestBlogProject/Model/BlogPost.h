@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString* blogDescription;
 @property NSString* pubDate;
 @property NSString* link;
+@property (nullable) NSData* thumbnailData;
 @end
 
 NS_ASSUME_NONNULL_END

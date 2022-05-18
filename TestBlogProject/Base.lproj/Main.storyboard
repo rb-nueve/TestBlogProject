@@ -52,7 +52,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oea-Zp-cb9">
                                                             <rect key="frame" x="0.0" y="0.0" width="358" height="265"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="TwJ-Ya-dpV">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="placeHolder" translatesAutoresizingMaskIntoConstraints="NO" id="TwJ-Ya-dpV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="173.5"/>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="P9S-S4-hRF">
@@ -82,7 +82,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="gRZ-26-ogV" firstAttribute="top" secondItem="P9S-S4-hRF" secondAttribute="top" constant="8" id="8na-Ni-nGV"/>
                                                                         <constraint firstAttribute="bottom" secondItem="gRZ-26-ogV" secondAttribute="bottom" constant="8" id="V0f-QK-8gg"/>
@@ -159,7 +159,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="test" width="303" height="221"/>
+        <image name="placeHolder" width="612" height="612"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

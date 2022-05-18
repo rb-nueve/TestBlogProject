@@ -13,18 +13,32 @@
     [super awakeFromNib];
     // Initialization code
     self.containerView.layer.cornerRadius = 16;
-    self.containerView.layer.masksToBounds = true;
+   
     
     self.containerView.layer.shadowOffset = CGSizeZero;
     self.containerView.layer.shadowColor = UIColor.darkGrayColor.CGColor;
     self.containerView.layer.shadowRadius = 8;
     self.containerView.layer.shadowOpacity = 0.3;
+    
+    self.blogImageView.layer.cornerRadius = 16;
+    self.blogImageView.layer.maskedCorners = kCALayerMinXMinYCorner | kCALayerMaxXMinYCorner;
+  
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void) configure:(BlogPost *)post {
+    self.titleLabel.text = post.title;
+    self.secondaryTitleLabel.text = post.author;
+    self.subtitleLabel.text = post.pubDate;
+    
+    if (post.thumbnailData == nil) {
+                self.blogImageView.image = [UIImage imageNamed:@"placeHolder"];
+            } else {
+                self.blogImageView.image = [UIImage imageWithData:post.thumbnailData];
+            }
+    
 
-    // Configure the view for the selected state
+    
+    
 }
 
 @end

@@ -17,7 +17,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 400;
+    self.tableView.rowHeight = 300;
     [self fetchPosts];
     // Do any additional setup after loading the view from its nib.
 }
@@ -29,9 +29,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
- 
-    return  cell;
+    [cell configure:self.posts[indexPath.row]];
+    [self fetchThumbNail:self.posts[indexPath.row].thumbnail];
+     return  cell;
 };
+
 
 -(void) fetchPosts {
     self.posts = [[NSMutableArray alloc] init];
@@ -55,7 +57,7 @@
             NSLog(@"failed to fetch books");
             return;
         }
-        NSDictionary *feed = json[@"feed"];
+       
         NSArray *postsArray = json[@"items"];
         
         for (NSDictionary *post in postsArray) {
@@ -86,6 +88,11 @@
         
     }];
     [dataTask resume];
+}
+
+
+- (void) fetchThumbNail:(NSString *)thumbnail {
+    
 }
 
 
