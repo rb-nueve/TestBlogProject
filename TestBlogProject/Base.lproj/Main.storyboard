@@ -19,12 +19,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="WELCOME" id="Bv1-v8-gXF"/>
+                    <connections>
+                        <segue destination="cYR-2n-BuX" kind="show" id="mUA-Pw-HJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--BLOG POSTS-->
         <scene sceneID="8Sw-hu-xbN">
             <objects>
                 <viewController id="cYR-2n-BuX" sceneMemberID="viewController">
@@ -34,6 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="dvJ-Fw-dUr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="BLOG POSTS" id="kim-Pd-9qS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPD-2O-wRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
