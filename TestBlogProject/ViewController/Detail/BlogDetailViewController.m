@@ -18,6 +18,7 @@
     
     [self.webView loadHTMLString:self.post.blogDescription baseURL:nil];
     self.navigationItem.title = self.post.title;
+    
     // Do any additional setup after loading the view.
 }
 

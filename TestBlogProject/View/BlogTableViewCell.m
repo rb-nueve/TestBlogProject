@@ -30,6 +30,10 @@
     self.secondaryTitleLabel.text = post.author;
     self.subtitleLabel.text = post.pubDate;
     
+    self.titleLabel.font = [self getProRoundedFont:self.titleLabel.font];
+    self.secondaryTitleLabel.font = [self getProRoundedFont:self.secondaryTitleLabel.font];
+    self.subtitleLabel.font = [self getProRoundedFont:self.subtitleLabel.font];
+    
     if (post.thumbnailData == nil) {
                 self.blogImageView.image = [UIImage imageNamed:@"placeHolder"];
         [self.indicator startAnimating];
@@ -41,6 +45,23 @@
 
     
     
+}
+
+
+- (UIFont *) getProRoundedFont:(UIFont *)font  {
+    
+    
+    if (@available(iOS 13.0, *)) {
+        UIFontDescriptor *descriptor =  [font.fontDescriptor fontDescriptorWithDesign:UIFontDescriptorSystemDesignRounded] ;
+        if (descriptor == nil) {
+            return font;
+        } else {
+            return  [UIFont fontWithDescriptor:descriptor size:font.pointSize];
+        }
+    } else {
+        // Fallback on earlier versions
+        return font;
+    }
 }
 
 @end

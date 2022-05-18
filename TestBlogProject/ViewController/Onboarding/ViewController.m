@@ -35,6 +35,19 @@
     [self.welcomeButton setTintColor:UIColor.whiteColor];
     [self.welcomeButton setTitle:@"Show Blog" forState:(UIControlStateNormal)];
     self.welcomeButton.layer.cornerRadius = 35;
+    UIFont *font = [UIFont systemFontOfSize:16 weight:(UIFontWeightSemibold)];
+    
+    if (@available(iOS 13.0, *)) {
+        UIFontDescriptor *descriptor =  [font.fontDescriptor fontDescriptorWithDesign:UIFontDescriptorSystemDesignRounded] ;
+        if (descriptor == nil) {
+            
+        } else {
+            font = [UIFont fontWithDescriptor:descriptor size:16];
+        }
+    } else {
+        // Fallback on earlier versions
+    }
+    self.welcomeButton.titleLabel.font = font;
     
     [self.welcomeButton addTarget:self action:@selector(navigateToPosts:) forControlEvents:(UIControlEventTouchUpInside)];
 }
