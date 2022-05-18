@@ -30,14 +30,29 @@
         <!--BLOG POSTS-->
         <scene sceneID="8Sw-hu-xbN">
             <objects>
-                <viewController id="cYR-2n-BuX" sceneMemberID="viewController">
+                <viewController id="cYR-2n-BuX" customClass="BlogViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naP-QV-Mni">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x4U-bJ-Slp">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dvJ-Fw-dUr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dvJ-Fw-dUr" firstAttribute="bottom" secondItem="x4U-bJ-Slp" secondAttribute="bottom" id="8Sz-Kb-WZZ"/>
+                            <constraint firstItem="x4U-bJ-Slp" firstAttribute="leading" secondItem="dvJ-Fw-dUr" secondAttribute="leading" id="9UV-K5-Kd0"/>
+                            <constraint firstItem="dvJ-Fw-dUr" firstAttribute="trailing" secondItem="x4U-bJ-Slp" secondAttribute="trailing" id="ZpO-Im-ZXQ"/>
+                            <constraint firstItem="x4U-bJ-Slp" firstAttribute="top" secondItem="dvJ-Fw-dUr" secondAttribute="top" id="h7U-u6-RmX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BLOG POSTS" id="kim-Pd-9qS"/>
+                    <connections>
+                        <outlet property="tableView" destination="x4U-bJ-Slp" id="VqJ-m4-Slg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPD-2O-wRG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
