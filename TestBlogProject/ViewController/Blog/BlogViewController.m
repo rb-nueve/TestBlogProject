@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.prefetchingEnabled = true;
     self.tableView.prefetchDataSource = self;
     self.tableView.rowHeight = 300;
     [self fetchPosts];

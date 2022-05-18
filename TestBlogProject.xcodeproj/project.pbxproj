@@ -13,7 +13,6 @@
 		9A5A4B602834AA6E00FF7E0E /* BlogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5A4B5F2834AA6E00FF7E0E /* BlogDetailViewController.m */; };
 		9A5A4B632834ACD000FF7E0E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5A4B622834ACD000FF7E0E /* WebKit.framework */; };
 		9AD43FD828342DC80065B82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FD728342DC80065B82A /* AppDelegate.m */; };
-		9AD43FDB28342DC80065B82A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDA28342DC80065B82A /* SceneDelegate.m */; };
 		9AD43FDE28342DC80065B82A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD43FDD28342DC80065B82A /* ViewController.m */; };
 		9AD43FE128342DC80065B82A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD43FDF28342DC80065B82A /* Main.storyboard */; };
 		9AD43FE328342DC90065B82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD43FE228342DC90065B82A /* Assets.xcassets */; };
@@ -54,8 +53,6 @@
 		9AD43FD328342DC80065B82A /* TestBlogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBlogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD43FD628342DC80065B82A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9AD43FD728342DC80065B82A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9AD43FD928342DC80065B82A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		9AD43FDA28342DC80065B82A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		9AD43FDC28342DC80065B82A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9AD43FDD28342DC80065B82A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9AD43FE028342DC80065B82A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,8 +182,6 @@
 			children = (
 				9AD43FD628342DC80065B82A /* AppDelegate.h */,
 				9AD43FD728342DC80065B82A /* AppDelegate.m */,
-				9AD43FD928342DC80065B82A /* SceneDelegate.h */,
-				9AD43FDA28342DC80065B82A /* SceneDelegate.m */,
 				9A5A4B5A2834907000FF7E0E /* ViewController */,
 				9A5A4B592834906200FF7E0E /* View */,
 				9A5A4B582834905700FF7E0E /* Model */,
@@ -375,7 +370,6 @@
 				9A5A4B502834887500FF7E0E /* BlogViewController.m in Sources */,
 				9A5A4B542834899300FF7E0E /* BlogTableViewCell.m in Sources */,
 				9AD43FE928342DC90065B82A /* main.m in Sources */,
-				9AD43FDB28342DC80065B82A /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,12 +30,12 @@
             [self.welcomeButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-30],
             [self.welcomeButton.heightAnchor constraintEqualToConstant:70],
     ]];
-
-    UIButtonConfiguration *config = [UIButtonConfiguration filledButtonConfiguration];
-    config.cornerStyle = UIButtonConfigurationCornerStyleCapsule;
-    [config setTitle:@"Show Blog"];
-     
-    self.welcomeButton.configuration = config;
+    
+    self.welcomeButton.backgroundColor = UIColor.systemBlueColor;
+    [self.welcomeButton setTintColor:UIColor.whiteColor];
+    [self.welcomeButton setTitle:@"Show Blog" forState:(UIControlStateNormal)];
+    self.welcomeButton.layer.cornerRadius = 35;
+    
     [self.welcomeButton addTarget:self action:@selector(navigateToPosts:) forControlEvents:(UIControlEventTouchUpInside)];
 }
 
